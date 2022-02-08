@@ -1,0 +1,29 @@
+.card__segundo{
+    background-color: var(--branco);
+
+}
+
+
+
+@keyframes mudaCard{
+    0%{
+        left: 12%;
+    }
+    50%{
+        left: 40%;
+    }
+    100%{
+        left: 8%;
+    }
+}
+/* @keyframes indexSegundo{
+    0%{
+        z-index: 6;
+    }
+    50%{
+        z-index: 6;
+    }
+    100%{
+        z-index: 10;
+    }
+} */

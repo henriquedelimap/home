@@ -1,0 +1,94 @@
+.btPagina{
+    display: flex;
+    width: 100px;
+    height: fit-content;
+    justify-content: space-between;
+    transform: scale(.5);
+
+    position: absolute;
+    top: 16px;
+}
+
+.circulo{
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*fechar*/
+
+.fechar-pagina{
+    background-color: var(--vermelho-sistema);
+    border: 1px solid var(--vermelho-sistema);
+}
+
+.btPagina:hover .fechar-pagina::after{
+    content: '';
+    width: 1rem;
+    height: 10%;
+    background-color: var(--vermelho-escuro-sistema);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    position: relative;
+}
+.btPagina:hover .fechar-pagina::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 10%;
+    background-color: var(--vermelho-escuro-sistema);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+/*minimizar*/
+
+.minimizar-pagina{
+    background-color: var(--amarelo-sistema);
+    border: 1px solid var(--amarelo-sistema);
+} 
+
+.btPagina:hover .minimizar-pagina::after{
+    content: '';
+    width: 1rem;
+    height: 10%;
+    background-color: var(--amarelo-escuro-sistema);
+    border-radius: 2px;
+}
+
+/*maximizar*/
+
+.maximizar-pagina{
+    background-color: var(--verde-sistema);
+    border: 1px solid var(--verde-sistema);
+    transform: rotate(45deg);
+}
+
+.btPagina:hover .maximizar-pagina::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: .45rem solid transparent;
+    border-left: .45rem solid transparent;
+    border-bottom: .45rem solid var(--verde-escuro-sistema);
+    border-radius: 4px;
+    transform: rotate(90deg) translateY(-5px);
+    position: relative;
+}
+.btPagina:hover .maximizar-pagina::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: .45rem solid transparent;
+    border-left: .45rem solid transparent;
+    border-bottom: .45rem solid var(--verde-escuro-sistema);
+    border-radius: 4px;
+    transform: rotate(-90deg) translateY(-5px);
+    position: absolute;
+}

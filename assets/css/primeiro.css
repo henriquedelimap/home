@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+body,
+.cards{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background: var(--branco-fundo);
+}
+
+.card__padrao{
+    height: 80vh;
+    width: 64%;
+    border-radius: 1rem;
+    position: absolute;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.15);
+}
+
+.header__container{
+    background-color: var(--cinza-escuro);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+}
+
+.header__logo,
+.header__subtitulo{
+    color: var(--branco);
+    font-family: var(--fonte); 
+    
+    font-size: 3rem;
+    transform: scale(1);
+    text-transform: uppercase;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;  
+    margin: 32px;  
+}
+.header__logo{
+    grid-area: 1/1/2/1;
+    font-weight: 600;
+    position: relative;
+    margin-top: 64px;
+}
+.header__subtitulo{
+    grid-area: 2/1/2/2;
+}
+.header__sub--efeito{
+    font-weight: 600;
+    color: var(--azul);
+    font-size: 4rem;
+}
+
+
+
+
+.fecharPagina{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.posicao__primeira{
+    left: 8%;
+    cursor: default;
+    transition: all .4s ease;
+    box-shadow: none ;
+
+    z-index: 10;
+}
+.posicao__segunda{
+    left: 11%;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    z-index: 8;
+}
+.posicao__terceira{
+    left: 14%;
+    transition: all .4s ease;
+    cursor: pointer;
+
+    z-index: 6;
+
+}
+/* .posicao__quarta{
+    left: 17%;
+
+    z-index: 4;
+} */
+
+
+
+
+.primeiro--ativo{
+    left: 8%;
+    transition: .8s ease;
+    animation: .8s ease both mudaCard;
+}
+.segundo--ativo{
+    left: 8%;
+    animation: .8s ease both mudaCard, .8s ease both indexSegundo;
+    transition: .8s ease;
+}
+.terceiro--ativo{
+    left: 8%;
+    animation: 1s ease both mudaCard, 1s ease both indezTerceiro;
+    transition: 1s ease;
+    z-index: 6;
+
+}
+.quarto--ativo{
+    left: 8%;
+    animation: 1s ease both  mudaCard, 1s ease both indezQuarto;
+    transition: 1s ease;
+    z-index: 4;
+
+}
